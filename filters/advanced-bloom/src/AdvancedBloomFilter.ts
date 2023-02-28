@@ -40,7 +40,7 @@ class AdvancedBloomFilter extends Filter
         blur: 8,
         quality: 4,
         pixelSize: 1,
-        resolution: settings.FILTER_RESOLUTION,
+        resolution: Filter.defaultResolution,
     };
 
     /** To adjust the strength of the bloom. Higher values is more intense brightness. */
@@ -51,7 +51,7 @@ class AdvancedBloomFilter extends Filter
 
     private _extractFilter: ExtractBrightnessFilter;
     private _blurFilter: KawaseBlurFilter;
-    protected _resolution: number = settings.FILTER_RESOLUTION;
+    protected _resolution: number = Filter.defaultResolution;
 
     /**
      * @param {object|number} [options] - The optional parameters of advanced bloom filter.
